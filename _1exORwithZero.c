@@ -1,3 +1,10 @@
+
+// 1. Write a C program that contains a string (char pointer) with a value ‘Hello world’. The program should
+// XOR each character in this string with 0 and display the result. 
+
+
+// Program : 1 
+
 #include <stdio.h>
 
 int main() {
@@ -15,3 +22,8 @@ int main() {
     printf("\n");
     return 0;
 }
+
+// OutPut : 
+
+// Original String: Hello world
+// After XOR with 0: Hello world
