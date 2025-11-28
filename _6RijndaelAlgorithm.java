@@ -43,3 +43,28 @@ public class _6RijndaelAlgorithm {
         System.out.println("Decrypted Text: " + new String(decrypted));
     }
 }
+
+
+// import javax.crypto.*;
+// import javax.crypto.spec.SecretKeySpec;
+
+// public class AESShort {
+//     public static void main(String[] args) throws Exception {
+
+//         String msg = "Hello World";
+//         String keyStr = "1234567890123456"; // 16-byte key
+
+//         SecretKeySpec key = new SecretKeySpec(keyStr.getBytes(), "AES");
+//         Cipher c = Cipher.getInstance("AES");
+
+//         c.init(Cipher.ENCRYPT_MODE, key);
+//         byte[] enc = c.doFinal(msg.getBytes());
+
+//         c.init(Cipher.DECRYPT_MODE, key);
+//         byte[] dec = c.doFinal(enc);
+
+//         System.out.println("Encrypted: " + new String(enc));
+//         System.out.println("Decrypted: " + new String(dec));
+//     }
+// }
+
