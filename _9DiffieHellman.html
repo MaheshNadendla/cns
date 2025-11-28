@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <p>p (prime): <input id="p"></p>
+  <p>g (base): <input id="g"></p>
+  <p>x (Alice private): <input id="x"></p>
+  <p>y (Bob private): <input id="y"></p>
+  <button onclick="dh()">Compute</button>
+  <pre id="out"></pre>
+
+<script>
+function dh() {
+  let p = +document.getElementById("p").value;
+  let g = +document.getElementById("g").value;
+  let x = +document.getElementById("x").value;
+  let y = +document.getElementById("y").value;
+
+  let A = Math.pow(g, x) % p;       // Alice public
+  let B = Math.pow(g, y) % p;       // Bob public
+  let k1 = Math.pow(B, x) % p;      // Alice key
+  let k2 = Math.pow(A, y) % p;      // Bob key
+
+  let msg = "";
+  msg += "Alice public A = " + A + "\n";
+  msg += "Bob   public B = " + B + "\n";
+  msg += "Key at Alice   = " + k1 + "\n";
+  msg += "Key at Bob     = " + k2 + "\n";
+  msg += (k1 === k2 ? "Success: keys match" : "Error: keys differ");
+
+  document.getElementById("out").textContent = msg;
+}
+</script>
+</body>
+</html>

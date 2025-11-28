@@ -2,7 +2,7 @@ import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 
-public class RC4Short {
+public class _7RC4 {
     public static void main(String[] args) throws Exception {
         String msg = "Hello World";
 
